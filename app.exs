@@ -1,9 +1,9 @@
 Code.require_file("modules.exs")
 
-[all_skills, all_crafts] = Hours.get_refined_data(false)
-[all_skills, all_crafts] = Hours.exclude_skills_and_crafts([], all_skills, [0], all_crafts)
-all_crafts = Hours.sort_crafts_by_number_of_skills(all_crafts)
-all_skills = Hours.sort_skills_by_number_of_crafts(all_skills)
+{all_skills, all_crafts} = Hours.read_dicts()
+# [all_skills, all_crafts] = Hours.exclude_skills_and_crafts([], all_skills, [0], all_crafts)
+# all_crafts = Hours.sort_crafts_by_number_of_skills(all_crafts)
+# all_skills = Hours.sort_skills_by_number_of_crafts(all_skills)
 start_time = DateTime.utc_now()
 
 IO.inspect([all_skills, all_crafts], charlists: :as_lists)

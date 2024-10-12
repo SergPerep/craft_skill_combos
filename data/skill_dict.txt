@@ -1,0 +1,46 @@
+0 | Inks of Revelation | 10, 14, 17
+1 | Coil & Chasm | 0, 2
+2 | Wolf Stories | 0, 6
+3 | Hill & Hollow | 0, 11
+4 | Serpents & Venoms | 0, 6
+5 | Drums & Dances | 1, 3
+6 | Stone Stories | 1, 2
+7 | Herbs & Infusions | 2, 4
+8 | Spices & Savours | 2, 8
+9 | Edicts Martial | 5, 7
+10 | Insects & Nectars | 6, 14
+11 | Sharps | 6, 18
+12 | Disciplines of the Hammer | 7, 13
+13 | Ragged Crossroads | 7, 16
+14 | Meniscate Reflections | 8, 18
+15 | Inks of Containment | 14, 17
+16 | Inks of Power | 14, 17
+17 | Auroral Contemplations | 15, 18
+18 | Furs & Feathers | 0
+19 | Horns & Ivories | 0
+20 | Path & Pilgrim | 0
+21 | Pentiments & Precursors | 0
+22 | Orchids & Narcotics | 2
+23 | Strings & Songs | 3
+24 | Edicts Inviolable | 4
+25 | Maggephene Mysteries | 4
+26 | Quenchings & Quellings | 4
+27 | Surgeries & Exsanguinations | 4
+28 | Desires & Dissolutions | 6
+29 | Rhyme & Remembrance | 6
+30 | Snow Stories | 6
+31 | Sickle & Eclipse | 7
+32 | Pyroglyphics | 8
+33 | Sacra Limiae | 8
+34 | Solutions & Separations | 8
+35 | Watchman's Paradoxes | 9
+36 | Sea Stories | 11
+37 | Tridesma Hiera | 12
+38 | Anbary & Lapidary | 13
+39 | Bells & Brazieries | 13
+40 | Door & Wall | 13
+41 | Transformations & Liberations | 13
+42 | Leaves & Thorns | 14
+43 | Rites of the Roots | 14
+44 | Ouranoscopy | 16
+45 | Disciplines of the Scar | 18

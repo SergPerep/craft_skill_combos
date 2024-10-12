@@ -1,0 +1,19 @@
+0 | Bisclavret's_Knot | 1, 2, 18, 19, 20, 3, 21, 4
+1 | Savage_Hymn | 5, 6
+2 | Thirza's_Cordials | 1, 7, 22, 8, 6
+3 | Cheerful_Ditty | 5, 23
+4 | Regensburg_Balm | 24, 7, 25, 26, 27
+5 | Old_Wound | 9
+6 | Midnight_Mark | 28, 10, 29, 4, 11, 30, 2
+7 | Labhitic_Tincture | 12, 9, 13, 31
+8 | Wescott's_Compounds | 14, 32, 8, 33, 34
+9 | Tanglebrag | 35
+10 | Paint:_Moth-Gold | 0
+11 | Salt-Sign | 3, 36
+12 | Confounding_Parable | 37
+13 | Bitterblack_Salts | 38, 39, 12, 40, 41
+14 | Yewgall_Ink | 15, 16, 0, 10, 42, 43
+15 | Eigengrau | 17
+16 | Bittersweet_Certainty | 44, 13
+17 | Stargall_Ink | 15, 16, 0
+18 | Torgue's_Cleansing | 17, 45, 14, 11

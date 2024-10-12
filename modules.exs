@@ -1,4 +1,28 @@
 defmodule Hours do
+  def read_dicts() do
+    [skill_dicts, craft_dicts] =
+      Enum.map(["data/skill_dict.txt", "data/craft_dict.txt"], fn file_path ->
+        File.read!(file_path)
+        |> String.split("\n")
+        |> Enum.map(fn line ->
+          [id, name, ref_ids] = String.split(line, " | ", trim: true)
+          {id, _} = Integer.parse(id)
+
+          ref_ids =
+            String.split(ref_ids, ", ")
+            |> Enum.map(fn id ->
+              {id, _} = Integer.parse(id)
+              id
+            end)
+
+
+          [id, name, ref_ids]
+        end)
+      end)
+
+    {skill_dicts, craft_dicts}
+  end
+
   def get_refined_data(is_having_names \\ true) do
     input =
       File.read!("raw_input_test.csv")
@@ -34,7 +58,6 @@ defmodule Hours do
             skill_id
           end)
 
-
         [id, craft_name, skill_ids]
       end)
 
@@ -48,6 +71,7 @@ defmodule Hours do
             Enum.member?(cr_sk_ids, sk_id)
           end)
           |> Enum.map(fn cr -> List.first(cr) end)
+
         [sk_id, sk_name, sk_cr_ids]
       end)
 
@@ -67,8 +91,8 @@ defmodule Hours do
   def sort_crafts_by_number_of_skills(crafts),
     do: Enum.sort_by(crafts, fn craft -> List.last(craft) |> length() end)
 
-def sort_skills_by_number_of_crafts(skills),
- do: Enum.sort_by(skills, fn sk -> List.last(sk) |> length() end, :desc)
+  def sort_skills_by_number_of_crafts(skills),
+    do: Enum.sort_by(skills, fn sk -> List.last(sk) |> length() end, :desc)
 
   def read_journey(journey, crucial_skills_ids, all_skills, all_crafts) do
     selected_skill_ids =
@@ -76,7 +100,7 @@ def sort_skills_by_number_of_crafts(skills),
         Enum.map(journey, fn j ->
           [craft_id, num, _max] = j
 
-          Skills.get_skill_ids_by_craft_id(craft_id, all_crafts)
+          get_skill_ids_by_craft_id(craft_id, all_crafts)
           |> Enum.at(num)
         end)
 
@@ -110,7 +134,8 @@ def sort_skills_by_number_of_crafts(skills),
   end
 
   def make_journey(all_skills, all_crafts) do
-    [crucial_skill_ids, _sk_ids, first_journey] = Skills.get_necessary_skill_ids(all_skills, all_crafts)
+    [crucial_skill_ids, _sk_ids, first_journey] =
+      get_necessary_skill_ids(all_skills, all_crafts)
 
     make_journey(
       first_journey,
@@ -172,8 +197,6 @@ def sort_skills_by_number_of_crafts(skills),
     |> List.last()
   end
 
-
-
   def next_craft([], selected_skill_ids, _all_skills, journey, _j_l_limit) do
     {:ok, selected_skill_ids, journey}
   end
@@ -210,10 +233,6 @@ def sort_skills_by_number_of_crafts(skills),
     end
   end
 
-
-
-
-
   def exclude_skills_and_crafts(skills_ids_to_exclude, skills, crafts_ids_to_exclude, crafts) do
     skills =
       Enum.filter(skills, fn sk ->
@@ -240,13 +259,13 @@ def sort_skills_by_number_of_crafts(skills),
       Enum.map(skills, fn [sk_id, cr_ids] ->
         cr_ids =
           Enum.filter(cr_ids, fn cr_id ->
-
             !Enum.member?(crafts_ids_to_exclude, cr_id)
           end)
 
         [sk_id, cr_ids]
       end)
       |> Enum.filter(fn skill -> List.last(skill) |> length() > 0 end)
+
     [skills, crafts]
   end
 
