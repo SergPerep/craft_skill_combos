@@ -1,10 +1,10 @@
 input =
-  File.read!("raw_input_test.csv")
+  File.read!("input/raw_input_complete.csv")
   |> String.split("\n")
   |> Enum.map(fn line ->
     line = String.replace(line, " , ", "|") |> String.replace("\"", "") |> String.split(",")
     [Enum.at(line, 2), Enum.at(line, 3) |> String.trim() |> String.split("|", trim: true)]
-  end)
+  end) |> Enum.uniq()
 
 input = List.delete_at(input, 0)
 input = Enum.map(0..(length(input) - 1), fn index -> [index] ++ Enum.at(input, index) end)

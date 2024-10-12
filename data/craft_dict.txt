@@ -1,19 +1,86 @@
-0 | Bisclavret's_Knot | 1, 2, 18, 19, 20, 3, 21, 4
-1 | Savage_Hymn | 5, 6
-2 | Thirza's_Cordials | 1, 7, 22, 8, 6
-3 | Cheerful_Ditty | 5, 23
-4 | Regensburg_Balm | 24, 7, 25, 26, 27
-5 | Old_Wound | 9
-6 | Midnight_Mark | 28, 10, 29, 4, 11, 30, 2
-7 | Labhitic_Tincture | 12, 9, 13, 31
-8 | Wescott's_Compounds | 14, 32, 8, 33, 34
-9 | Tanglebrag | 35
-10 | Paint:_Moth-Gold | 0
-11 | Salt-Sign | 3, 36
-12 | Confounding_Parable | 37
-13 | Bitterblack_Salts | 38, 39, 12, 40, 41
-14 | Yewgall_Ink | 15, 16, 0, 10, 42, 43
-15 | Eigengrau | 17
-16 | Bittersweet_Certainty | 44, 13
-17 | Stargall_Ink | 15, 16, 0
-18 | Torgue's_Cleansing | 17, 45, 14, 11
+0 | Amethyst Ampoule | 4, 50, 10, 51, 11
+1 | Ascendant Harmony | 12, 13, 14, 52, 15, 16
+2 | Ashartine | 4, 17, 18, 53, 5
+3 | Asimel | 19, 54, 20, 21, 1
+4 | Awakened Feather | 5, 14, 50, 22, 55, 23
+5 | Azoth | 13, 24, 25, 26, 52, 18, 27
+6 | Beguiling Melody | 12, 28, 6, 7
+7 | Bisclavret's Knot | 29, 30, 14, 31, 32, 56, 28, 57
+8 | Bitterblack Salts | 5, 13, 24, 25, 2
+9 | Bittersweet Certainty | 21, 33, 34, 35
+10 | Black Sapphire Wash | 36, 19, 54, 20, 7
+11 | Catwink | 3, 37, 38, 54, 58
+12 | Cheerful Ditty | 39, 16
+13 | Chimeric Larva | 31, 8, 56, 6, 2
+14 | Chronsichord | 4, 17, 50, 40, 11
+15 | Confounding Parable | 7, 40, 15, 12, 41
+16 | Curious Hunch | 40, 11
+17 | Dearday Lens | 42, 4, 17, 18
+18 | Didumos | 21, 12, 13, 22, 55
+19 | Earthquake-Name | 42, 29, 56, 43, 30
+20 | Eigengrau | 9, 3, 55, 59, 60, 19
+21 | Enduring Reflection | 32, 19, 40, 15
+22 | Essential Periost | 61, 37, 30, 35, 34, 43
+23 | Flushed Mommet | 36, 14, 28, 6, 11
+24 | Forbidden Epic | 44
+25 | Frith-Weft | 23, 45
+26 | Gervinite | 50, 17
+27 | Gideon's Soaks | 58, 46, 60, 59, 51
+28 | Glassfinger Toxin | 25, 47, 10, 51, 57
+29 | Hive's Lament | 39
+30 | Horizon-Sight | 32, 40, 38, 15
+31 | Houndsgall | 31, 3, 32, 28
+32 | Ichor Auroral | 9, 0, 38
+33 | Ichor Vitreous | 4, 17, 1, 41, 53
+34 | Invincible Audacity | 9, 24, 44
+35 | Iotic Essence | 5, 26, 18, 27, 2
+36 | January Sanguinary | 51, 58, 46, 60
+37 | Labhitic Tincture | 24, 44, 33, 37
+38 | Leathy | 3, 46, 8, 62, 48
+39 | Living Relic | 23, 14, 56, 28, 43
+40 | Marakat | 0, 8, 7
+41 | Mazarine Fife | 21, 22, 41
+42 | Midnight Mark | 36, 8, 35, 57, 61, 34, 30
+43 | Nameday Riddle | 47, 48, 22, 10, 45
+44 | Nillycant | 3, 55, 33
+45 | Old Moment | 42, 31, 29, 32, 30
+46 | Old Wound | 44
+47 | Orpiment Exultant | 5, 0, 2
+48 | Paint: Moth-Gold | 1
+49 | Pale Mommet | 28, 6, 20, 11, 7
+50 | Perhibiate | 23, 45, 0
+51 | Perilous Imago | 8, 6, 2
+52 | Perinculate | 54, 42, 44, 37, 0
+53 | Porphyrine | 9, 0, 38, 1, 19
+54 | Pyrus Auricalcinus | 36, 29, 49, 27
+55 | Refulgin | 1, 52, 41, 2
+56 | Regensburg Balm | 58, 46, 60, 59, 51
+57 | Rubywise Ruin | 12, 36, 49, 62
+58 | Sacrament Ascite | 25, 47, 4, 31, 10
+59 | Sacrament Calicite | 12, 49, 62, 20, 7
+60 | Sacrament Malachite | 29, 39, 46, 49, 48, 27, 43
+61 | Salt-Sign | 56, 20, 0, 32, 19, 38
+62 | Savage Hymn | 39, 43
+63 | Secret Threshold | 25, 47, 31, 40
+64 | Serpent-Milk | 42, 26, 61, 37, 57
+65 | Skinshuck Mead | 8, 47, 48, 22, 10, 6, 2
+66 | Solomon's Preparation | 3, 59, 33, 55, 60
+67 | Stargall Ink | 3, 0, 1
+68 | Stymphling | 35, 38, 57, 34, 7
+69 | Swaddled Thunder | 59, 23, 45, 39, 16
+70 | Tanglebrag | 53, 47, 6, 48, 45
+71 | Thirza's Cordials | 29, 46, 62, 27, 43
+72 | Thunderskin's Paean | 39, 16
+73 | Torgue's Cleansing | 9, 42, 26, 61, 52
+74 | Uzult | 5, 17, 1, 41, 53
+75 | Wescott's Compounds | 26, 18, 27, 22, 10
+76 | Wind-in-Waiting | 14, 41, 15, 16
+77 | Winning Move | 9, 24, 26, 33, 61
+78 | Orichalcum Wire | 13, 24, 25, 4, 50
+79 | Wistful Air | 13, 21, 15, 16, 53
+80 | Witching Tisane | 36, 49, 62, 20, 11
+81 | Wormwood Dream | 58, 35, 37, 34, 30, 44
+82 | Wyrd-Weft | 23, 45
+83 | Xanthotic Essence | 9, 52, 18, 2, 5
+84 | Year Tally | 21, 54, 33, 35, 34
+85 | Yewgall Ink | 3, 0, 1, 8, 49, 48

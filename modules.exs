@@ -15,12 +15,15 @@ defmodule Hours do
               id
             end)
 
-
           [id, name, ref_ids]
         end)
       end)
 
     {skill_dicts, craft_dicts}
+  end
+
+  def get_name_by_id(id, skill_dict) do
+    Enum.find(skill_dict, fn skill -> List.first(skill) === id end) |> Enum.at(1)
   end
 
   def get_refined_data(is_having_names \\ true) do
@@ -148,6 +151,8 @@ defmodule Hours do
   end
 
   def make_journey(last_journey, journeys, crucial_skill_ids, all_skills, all_crafts, j_l_limit) do
+    IO.inspect(last_journey, charlists: :as_lists)
+
     {j_l_limit, journeys} =
       if j_l_limit === nil do
         {length(all_crafts), journeys}
@@ -284,6 +289,27 @@ defmodule Hours do
     [crucial_skill_ids, selected_skill_ids, journey]
   end
 
+  def filter_out_mandatory_skills(mandatory_skill_ids, skills, crafts) do
+    skills =
+      Enum.filter(skills, fn skill ->
+        !Enum.member?(mandatory_skill_ids, List.first(skill))
+      end)
+
+    crafts =
+      Enum.filter(crafts, fn [cr_id, cr_sk_ids] ->
+          Enum.reduce_while(cr_sk_ids, true, fn cr_sk_id, acc ->
+            if Enum.member?(mandatory_skill_ids, cr_sk_id) do
+              {:halt, false}
+            else
+              {:cont, true}
+            end
+          end)
+      end)
+
+    IO.inspect({skills, crafts}, charlists: :as_lists)
+    {skills, crafts}
+  end
+
   def extract_one_skill_crafts(crafts) do
     one_skill_only_crafts = Enum.filter(crafts, fn craft -> length(List.last(craft)) === 1 end)
     rest_crafts = Enum.filter(crafts, fn craft -> length(List.last(craft)) > 1 end)
@@ -296,8 +322,9 @@ defmodule Hours do
         get_skill_ids_by_craft_id(cr_id, crafts)
       end)
       |> List.flatten()
+      |> Enum.uniq()
 
-    # IO.inspect(one_skill_only_crafts, charlists: :as_lists)
+    IO.inspect(one_skill_only_craft_ids, charlists: :as_lists)
 
     rest_crafts =
       Enum.filter(rest_crafts, fn cr -> !Enum.member?(selected_skill_ids, List.last(cr)) end)
