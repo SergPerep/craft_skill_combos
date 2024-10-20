@@ -151,7 +151,7 @@ defmodule Hours do
   end
 
   def make_journey(last_journey, journeys, crucial_skill_ids, all_skills, all_crafts, j_l_limit) do
-    IO.inspect(last_journey, charlists: :as_lists)
+    # IO.inspect(last_journey, charlists: :as_lists)
 
     {j_l_limit, journeys} =
       if j_l_limit === nil do
@@ -159,6 +159,7 @@ defmodule Hours do
       else
         if length(last_journey) < j_l_limit do
           j_l_limit = length(last_journey)
+          IO.puts("New limit: " <> Integer.to_string(j_l_limit))
           journeys = Enum.filter(journeys, fn j -> length(j) <= j_l_limit end)
           {j_l_limit, journeys}
         else
@@ -296,17 +297,16 @@ defmodule Hours do
       end)
 
     crafts =
-      Enum.filter(crafts, fn [cr_id, cr_sk_ids] ->
-          Enum.reduce_while(cr_sk_ids, true, fn cr_sk_id, acc ->
-            if Enum.member?(mandatory_skill_ids, cr_sk_id) do
-              {:halt, false}
-            else
-              {:cont, true}
-            end
-          end)
+      Enum.filter(crafts, fn [_cr_id, cr_sk_ids] ->
+        Enum.reduce_while(cr_sk_ids, true, fn cr_sk_id, _acc ->
+          if Enum.member?(mandatory_skill_ids, cr_sk_id) do
+            {:halt, false}
+          else
+            {:cont, true}
+          end
+        end)
       end)
 
-    IO.inspect({skills, crafts}, charlists: :as_lists)
     {skills, crafts}
   end
 
@@ -323,8 +323,6 @@ defmodule Hours do
       end)
       |> List.flatten()
       |> Enum.uniq()
-
-    IO.inspect(one_skill_only_craft_ids, charlists: :as_lists)
 
     rest_crafts =
       Enum.filter(rest_crafts, fn cr -> !Enum.member?(selected_skill_ids, List.last(cr)) end)
